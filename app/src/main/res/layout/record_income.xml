@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_gongzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_wage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_gongzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="工资"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_gongzi"
+                app:layout_constraintStart_toStartOf="@+id/imageView_gongzi"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gongzi" />
+
+            <EditText
+                android:id="@+id/editText_gongzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_gongzi"
+                app:layout_constraintStart_toEndOf="@+id/imageView_gongzi"
+                app:layout_constraintTop_toTopOf="@+id/imageView_gongzi" />
+
+            <ImageView
+                android:id="@+id/imageView_jianzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_part"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gongzi" />
+
+            <TextView
+                android:id="@+id/textView_jianzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="兼职"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_jianzhi"
+                app:layout_constraintStart_toStartOf="@+id/imageView_jianzhi"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_jianzhi" />
+
+            <EditText
+                android:id="@+id/editText_jianzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_jianzhi"
+                app:layout_constraintStart_toEndOf="@+id/imageView_jianzhi"
+                app:layout_constraintTop_toTopOf="@+id/imageView_jianzhi" />
+
+            <ImageView
+                android:id="@+id/imageView_licai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_manage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_jianzhi" />
+
+            <TextView
+                android:id="@+id/textView_licai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="理财"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_licai"
+                app:layout_constraintStart_toStartOf="@+id/imageView_licai"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_licai" />
+
+            <EditText
+                android:id="@+id/editText_licai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_licai"
+                app:layout_constraintStart_toEndOf="@+id/imageView_licai"
+                app:layout_constraintTop_toTopOf="@+id/imageView_licai" />
+
+            <ImageView
+                android:id="@+id/imageView_lijin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_wage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_licai" />
+
+            <TextView
+                android:id="@+id/textView_lijin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="礼金"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_lijin"
+                app:layout_constraintStart_toStartOf="@+id/imageView_lijin"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_lijin" />
+
+            <EditText
+                android:id="@+id/editText_lijin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_lijin"
+                app:layout_constraintStart_toEndOf="@+id/imageView_lijin"
+                app:layout_constraintTop_toTopOf="@+id/imageView_lijin" />
+
+            <ImageView
+                android:id="@+id/imageView_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_other"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_lijin" />
+
+            <TextView
+                android:id="@+id/textView_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="其它"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_other"
+                app:layout_constraintStart_toStartOf="@+id/imageView_other"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_other" />
+
+            <EditText
+                android:id="@+id/editText_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_other"
+                app:layout_constraintStart_toEndOf="@+id/imageView_other"
+                app:layout_constraintTop_toTopOf="@+id/imageView_other" />
+
+            <Button
+                android:id="@+id/button_income_gongzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_gongzi"
+                app:layout_constraintStart_toEndOf="@+id/editText_gongzi"
+                app:layout_constraintTop_toTopOf="@+id/editText_gongzi" />
+
+            <Button
+                android:id="@+id/button_income_jianzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_jianzhi"
+                app:layout_constraintStart_toEndOf="@+id/editText_jianzhi"
+                app:layout_constraintTop_toTopOf="@+id/editText_jianzhi" />
+
+            <Button
+                android:id="@+id/button_income_licai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_licai"
+                app:layout_constraintStart_toEndOf="@+id/editText_licai"
+                app:layout_constraintTop_toTopOf="@+id/editText_licai" />
+
+            <Button
+                android:id="@+id/button_income_lijin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_lijin"
+                app:layout_constraintStart_toEndOf="@+id/editText_lijin"
+                app:layout_constraintTop_toTopOf="@+id/editText_lijin" />
+
+            <Button
+                android:id="@+id/button_income_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_other"
+                app:layout_constraintStart_toEndOf="@+id/editText_other"
+                app:layout_constraintTop_toTopOf="@+id/editText_other" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

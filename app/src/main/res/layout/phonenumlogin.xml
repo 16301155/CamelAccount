@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView_phonenumlogin_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="×"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_phonenumlogin_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="64dp"
+        android:text="手机号"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_phonenumlogin_back" />
+
+    <EditText
+        android:id="@+id/editText_phonenumlogin_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:digits="1234567890-"
+        android:ems="10"
+        android:hint="请输入手机号"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_phonenumlogin_num"
+        app:layout_constraintStart_toEndOf="@+id/textView_phonenumlogin_num"
+        app:layout_constraintTop_toTopOf="@+id/textView_phonenumlogin_num" />
+
+    <ImageView
+        android:id="@+id/imageView_login_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_clear"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_phonenumlogin_num"
+        app:layout_constraintEnd_toEndOf="@+id/editText_phonenumlogin_num"
+        app:layout_constraintTop_toTopOf="@+id/editText_phonenumlogin_num"
+        android:visibility="invisible"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/textView_phonenumcreate2_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:text="密码"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_phonenumlogin_num" />
+
+    <EditText
+        android:id="@+id/editText_phonenumlogin_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_phonenumcreate2_sure"
+        app:layout_constraintStart_toEndOf="@+id/textView_phonenumcreate2_sure"
+        app:layout_constraintTop_toTopOf="@+id/textView_phonenumcreate2_sure" />
+
+    <Button
+        android:id="@+id/button_phonenumlogin_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_shape_2"
+        android:text="登录"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CheckBox" />
+
+    <TextView
+        android:id="@+id/textView_findout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="找回密码"
+        app:layout_constraintEnd_toEndOf="@+id/button_phonenumlogin_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_phonenumlogin_login" />
+
+    <CheckBox
+        android:id="@+id/CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示密码"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@+id/editText_phonenumlogin_password"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phonenumlogin_password" />
+
+</android.support.constraint.ConstraintLayout>

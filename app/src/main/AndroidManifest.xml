@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myungger.pocket">
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/camel"
+        android:label="骆驼记账"
+        android:roundIcon="@drawable/camel"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- QQ Login Code Start-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这地方需要用你在开放平台申请的appid:tencent+appid -->
+                <data android:scheme="tencent1107957445" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- End of QQ Login Code -->
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity
+            android:name=".activity.RecordActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.AllClassActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.CreateActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.PhoneNumCreateActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.PhoneNumLoginActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.PhoneNumCreate2Activity">
+        </activity>
+
+        <activity
+            android:name=".activity.DeleteActivity">
+        </activity>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+</manifest>

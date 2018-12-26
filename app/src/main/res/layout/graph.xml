@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_graph"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eadd09"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+    <TextView
+        android:id="@+id/textView_graph_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="图表"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView_graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_graph">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:text="本周"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_week_alloutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="总支出："
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_week" />
+
+            <TextView
+                android:id="@+id/textView_week_alloutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_alloutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_week_alloutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_week_avgoutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="平均值："
+                app:layout_constraintStart_toStartOf="@+id/textView_week_alloutcome"
+                app:layout_constraintTop_toBottomOf="@+id/textView_week_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_week_avgoutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_avgoutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_week_avgoutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_avgoutcome" />
+
+            <TextView
+                android:id="@+id/textView_week_allincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:text="总收入："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_alloutcomenum"
+                app:layout_constraintStart_toEndOf="@+id/textView_week"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_alloutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_week_allincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_allincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_week_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_allincome" />
+
+            <TextView
+                android:id="@+id/textView_week_avgincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平均值："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_avgoutcomenum"
+                app:layout_constraintStart_toStartOf="@+id/textView_week_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_avgoutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_week_avgincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_week_avgincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_week_avgincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_week_avgincome" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart_week"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_week_avgincomenum">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <TextView
+                android:id="@+id/textView_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:text="本月"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineChart_week" />
+
+            <TextView
+                android:id="@+id/textView_month_alloutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="总支出："
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_month" />
+
+            <TextView
+                android:id="@+id/textView_month_alloutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_alloutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_month_alloutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_month_avgoutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="平均值："
+                app:layout_constraintStart_toStartOf="@+id/textView_month_alloutcome"
+                app:layout_constraintTop_toBottomOf="@+id/textView_month_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_month_avgoutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_avgoutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_month_avgoutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_avgoutcome" />
+
+            <TextView
+                android:id="@+id/textView_month_allincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:text="总收入："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_alloutcomenum"
+                app:layout_constraintStart_toEndOf="@+id/textView_month"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_alloutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_month_allincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_allincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_month_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_allincome" />
+
+            <TextView
+                android:id="@+id/textView_month_avgincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平均值："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_avgoutcomenum"
+                app:layout_constraintStart_toStartOf="@+id/textView_month_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_avgoutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_month_avgincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_month_avgincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_month_avgincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_month_avgincome" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart_month"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_month_avgincomenum">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <TextView
+                android:id="@+id/textView_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="32dp"
+                android:text="今年"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineChart_month" />
+
+            <TextView
+                android:id="@+id/textView_year_alloutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="总支出："
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_year" />
+
+            <TextView
+                android:id="@+id/textView_year_alloutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_alloutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_year_alloutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_year_avgoutcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="平均值："
+                app:layout_constraintStart_toStartOf="@+id/textView_year_alloutcome"
+                app:layout_constraintTop_toBottomOf="@+id/textView_year_alloutcome" />
+
+            <TextView
+                android:id="@+id/textView_year_avgoutcomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_avgoutcome"
+                app:layout_constraintStart_toEndOf="@+id/textView_year_avgoutcome"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_avgoutcome" />
+
+            <TextView
+                android:id="@+id/textView_year_allincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:text="总收入："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_alloutcomenum"
+                app:layout_constraintStart_toEndOf="@+id/textView_year"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_alloutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_year_allincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_allincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_year_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_allincome" />
+
+            <TextView
+                android:id="@+id/textView_year_avgincome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平均值："
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_avgoutcomenum"
+                app:layout_constraintStart_toStartOf="@+id/textView_year_allincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_avgoutcomenum" />
+
+            <TextView
+                android:id="@+id/textView_year_avgincomenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_year_avgincome"
+                app:layout_constraintStart_toEndOf="@+id/textView_year_avgincome"
+                app:layout_constraintTop_toTopOf="@+id/textView_year_avgincome" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart_year"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_year_avgincomenum">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

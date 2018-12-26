@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView_canyin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_canyin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_canyin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="餐饮"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_canyin"
+                app:layout_constraintStart_toStartOf="@+id/imageView_canyin"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_canyin" />
+
+            <EditText
+                android:id="@+id/editText_canyin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_canyin"
+                app:layout_constraintStart_toEndOf="@+id/imageView_canyin"
+                app:layout_constraintTop_toTopOf="@+id/imageView_canyin" />
+
+            <ImageView
+                android:id="@+id/imageView_gouwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_gouwu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_canyin" />
+
+            <TextView
+                android:id="@+id/textView_gouwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="购物"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_gouwu"
+                app:layout_constraintStart_toStartOf="@+id/imageView_gouwu"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_gouwu" />
+
+            <EditText
+                android:id="@+id/editText_gouwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_gouwu"
+                app:layout_constraintStart_toEndOf="@+id/imageView_gouwu"
+                app:layout_constraintTop_toTopOf="@+id/imageView_gouwu" />
+
+            <ImageView
+                android:id="@+id/imageView_riyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_richang"
+                app:layout_constraintStart_toStartOf="@+id/textView_gouwu"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gouwu" />
+
+            <TextView
+                android:id="@+id/textView_riyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="日用"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_riyong"
+                app:layout_constraintStart_toStartOf="@+id/imageView_riyong"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_riyong" />
+
+            <EditText
+                android:id="@+id/editText_riyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_riyong"
+                app:layout_constraintStart_toEndOf="@+id/imageView_riyong"
+                app:layout_constraintTop_toTopOf="@+id/imageView_riyong" />
+
+            <ImageView
+                android:id="@+id/imageView_jiaotong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_jiaotong"
+                app:layout_constraintStart_toStartOf="@+id/textView_riyong"
+                app:layout_constraintTop_toBottomOf="@+id/textView_riyong" />
+
+            <TextView
+                android:id="@+id/textView_jiaotong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="交通"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_jiaotong"
+                app:layout_constraintStart_toStartOf="@+id/imageView_jiaotong"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_jiaotong" />
+
+            <EditText
+                android:id="@+id/editText_jiaotong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_jiaotong"
+                app:layout_constraintStart_toEndOf="@+id/imageView_jiaotong"
+                app:layout_constraintTop_toTopOf="@+id/imageView_jiaotong" />
+
+            <ImageView
+                android:id="@+id/imageView_shucai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_vega"
+                app:layout_constraintStart_toStartOf="@+id/textView_jiaotong"
+                app:layout_constraintTop_toBottomOf="@+id/textView_jiaotong" />
+
+            <TextView
+                android:id="@+id/textView_shucai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="蔬菜"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_shucai"
+                app:layout_constraintStart_toStartOf="@+id/imageView_shucai"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_shucai" />
+
+            <EditText
+                android:id="@+id/editText_shucai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_shucai"
+                app:layout_constraintStart_toEndOf="@+id/imageView_shucai"
+                app:layout_constraintTop_toTopOf="@+id/imageView_shucai" />
+
+            <ImageView
+                android:id="@+id/imageView_shuiguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_fruit"
+                app:layout_constraintStart_toStartOf="@+id/textView_shucai"
+                app:layout_constraintTop_toBottomOf="@+id/textView_shucai" />
+
+            <TextView
+                android:id="@+id/textView_shuiguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="水果"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_shuiguo"
+                app:layout_constraintStart_toStartOf="@+id/imageView_shuiguo"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_shuiguo" />
+
+            <EditText
+                android:id="@+id/editText_shuiguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_shuiguo"
+                app:layout_constraintStart_toEndOf="@+id/imageView_shuiguo"
+                app:layout_constraintTop_toTopOf="@+id/imageView_shuiguo" />
+
+            <ImageView
+                android:id="@+id/imageView_lingshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_lingshi"
+                app:layout_constraintStart_toStartOf="@+id/textView_shuiguo"
+                app:layout_constraintTop_toBottomOf="@+id/textView_shuiguo" />
+
+            <TextView
+                android:id="@+id/textView_lingshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="零食"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_lingshi"
+                app:layout_constraintStart_toStartOf="@+id/imageView_lingshi"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_lingshi" />
+
+            <EditText
+                android:id="@+id/editText_lingshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_lingshi"
+                app:layout_constraintStart_toEndOf="@+id/imageView_lingshi"
+                app:layout_constraintTop_toTopOf="@+id/imageView_lingshi" />
+
+            <ImageView
+                android:id="@+id/imageView_yundong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_yundong"
+                app:layout_constraintStart_toStartOf="@+id/textView_lingshi"
+                app:layout_constraintTop_toBottomOf="@+id/textView_lingshi" />
+
+            <TextView
+                android:id="@+id/textView_yundong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="运动"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_yundong"
+                app:layout_constraintStart_toStartOf="@+id/imageView_yundong"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_yundong" />
+
+            <EditText
+                android:id="@+id/editText_yundong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_yundong"
+                app:layout_constraintStart_toEndOf="@+id/imageView_yundong"
+                app:layout_constraintTop_toTopOf="@+id/imageView_yundong" />
+
+            <ImageView
+                android:id="@+id/imageView_yule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_enter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_yundong" />
+
+            <TextView
+                android:id="@+id/textView_yule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="娱乐"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_yule"
+                app:layout_constraintStart_toStartOf="@+id/imageView_yule"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_yule" />
+
+            <EditText
+                android:id="@+id/editText_yule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_yule"
+                app:layout_constraintStart_toEndOf="@+id/imageView_yule"
+                app:layout_constraintTop_toTopOf="@+id/imageView_yule" />
+
+            <ImageView
+                android:id="@+id/imageView_tongxun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_yule" />
+
+            <TextView
+                android:id="@+id/textView_tongxun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="通讯"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_tongxun"
+                app:layout_constraintStart_toStartOf="@+id/imageView_tongxun"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_tongxun" />
+
+            <EditText
+                android:id="@+id/editText_tongxun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_tongxun"
+                app:layout_constraintStart_toEndOf="@+id/imageView_tongxun"
+                app:layout_constraintTop_toTopOf="@+id/imageView_tongxun" />
+
+            <ImageView
+                android:id="@+id/imageView_fushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_clothes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_tongxun" />
+
+            <TextView
+                android:id="@+id/textView_fushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="服饰"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_fushi"
+                app:layout_constraintStart_toStartOf="@+id/imageView_fushi"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_fushi" />
+
+            <EditText
+                android:id="@+id/editText_fushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_fushi"
+                app:layout_constraintStart_toEndOf="@+id/imageView_fushi"
+                app:layout_constraintTop_toTopOf="@+id/imageView_fushi" />
+
+            <ImageView
+                android:id="@+id/imageView_zhufang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_fushi" />
+
+            <TextView
+                android:id="@+id/textView_zhufang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="住房"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_zhufang"
+                app:layout_constraintStart_toStartOf="@+id/imageView_zhufang"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_zhufang" />
+
+            <EditText
+                android:id="@+id/editText_zhufang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_zhufang"
+                app:layout_constraintStart_toEndOf="@+id/imageView_zhufang"
+                app:layout_constraintTop_toTopOf="@+id/imageView_zhufang" />
+
+            <ImageView
+                android:id="@+id/imageView_shejiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_friend"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_zhufang" />
+
+            <TextView
+                android:id="@+id/textView_shejiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="社交"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_shejiao"
+                app:layout_constraintStart_toStartOf="@+id/imageView_shejiao"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_shejiao" />
+
+            <EditText
+                android:id="@+id/editText_shejiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_shejiao"
+                app:layout_constraintStart_toEndOf="@+id/imageView_shejiao"
+                app:layout_constraintTop_toTopOf="@+id/imageView_shejiao" />
+
+            <ImageView
+                android:id="@+id/imageView_lvxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_tour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_shejiao" />
+
+            <TextView
+                android:id="@+id/textView_lvxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="旅行"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_lvxing"
+                app:layout_constraintStart_toStartOf="@+id/imageView_lvxing"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_lvxing" />
+
+            <EditText
+                android:id="@+id/editText_lvxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_lvxing"
+                app:layout_constraintStart_toEndOf="@+id/imageView_lvxing"
+                app:layout_constraintTop_toTopOf="@+id/imageView_lvxing" />
+
+            <ImageView
+                android:id="@+id/imageView_qita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/widget_shape"
+                android:src="@drawable/ic_other"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_lvxing" />
+
+            <TextView
+                android:id="@+id/textView_qita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="其它"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_qita"
+                app:layout_constraintStart_toStartOf="@+id/imageView_qita"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_qita" />
+
+            <EditText
+                android:id="@+id/editText_qita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:digits="1234567890."
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_qita"
+                app:layout_constraintStart_toEndOf="@+id/imageView_qita"
+                app:layout_constraintTop_toTopOf="@+id/imageView_qita" />
+
+            <Button
+                android:id="@+id/button_outcome_canyin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="确定"
+                android:background="@drawable/button_shape_2"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_canyin"
+                app:layout_constraintStart_toEndOf="@+id/editText_canyin"
+                app:layout_constraintTop_toTopOf="@+id/editText_canyin" />
+
+            <Button
+                android:id="@+id/button_outcome_gouwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_gouwu"
+                app:layout_constraintStart_toEndOf="@+id/editText_gouwu"
+                app:layout_constraintTop_toTopOf="@+id/editText_gouwu" />
+
+            <Button
+                android:id="@+id/button_outcome_riyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_riyong"
+                app:layout_constraintStart_toEndOf="@+id/editText_riyong"
+                app:layout_constraintTop_toTopOf="@+id/editText_riyong" />
+
+            <Button
+                android:id="@+id/button_outcome_jiaotong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_jiaotong"
+                app:layout_constraintStart_toEndOf="@+id/editText_jiaotong"
+                app:layout_constraintTop_toTopOf="@+id/editText_jiaotong" />
+
+            <Button
+                android:id="@+id/button_outcome_shucai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_shucai"
+                app:layout_constraintStart_toEndOf="@+id/editText_shucai"
+                app:layout_constraintTop_toTopOf="@+id/editText_shucai" />
+
+            <Button
+                android:id="@+id/button_outcome_shuiguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_shuiguo"
+                app:layout_constraintStart_toEndOf="@+id/editText_shuiguo"
+                app:layout_constraintTop_toTopOf="@+id/editText_shuiguo" />
+
+            <Button
+                android:id="@+id/button_outcome_lingshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_lingshi"
+                app:layout_constraintStart_toEndOf="@+id/editText_lingshi"
+                app:layout_constraintTop_toTopOf="@+id/editText_lingshi" />
+
+            <Button
+                android:id="@+id/button_outcome_yundong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_yundong"
+                app:layout_constraintStart_toEndOf="@+id/editText_yundong"
+                app:layout_constraintTop_toTopOf="@+id/editText_yundong" />
+
+            <Button
+                android:id="@+id/button_outcome_yule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_yule"
+                app:layout_constraintStart_toEndOf="@+id/editText_yule"
+                app:layout_constraintTop_toTopOf="@+id/editText_yule" />
+
+            <Button
+                android:id="@+id/button_outcome_tongxun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_tongxun"
+                app:layout_constraintStart_toEndOf="@+id/editText_tongxun"
+                app:layout_constraintTop_toTopOf="@+id/editText_tongxun" />
+
+            <Button
+                android:id="@+id/button_outcome_fushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_fushi"
+                app:layout_constraintStart_toEndOf="@+id/editText_fushi"
+                app:layout_constraintTop_toTopOf="@+id/editText_fushi" />
+
+            <Button
+                android:id="@+id/button_outcome_zhufang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_zhufang"
+                app:layout_constraintStart_toEndOf="@+id/editText_zhufang"
+                app:layout_constraintTop_toTopOf="@+id/editText_zhufang" />
+
+            <Button
+                android:id="@+id/button_outcome_shejiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_shejiao"
+                app:layout_constraintStart_toEndOf="@+id/editText_shejiao"
+                app:layout_constraintTop_toTopOf="@+id/editText_shejiao" />
+
+            <Button
+                android:id="@+id/button_outcome_lvxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_lvxing"
+                app:layout_constraintStart_toEndOf="@+id/editText_lvxing"
+                app:layout_constraintTop_toTopOf="@+id/editText_lvxing" />
+
+            <Button
+                android:id="@+id/button_outcome_qita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_shape_2"
+                android:text="确定"
+                app:layout_constraintBottom_toBottomOf="@+id/editText_qita"
+                app:layout_constraintStart_toEndOf="@+id/editText_qita"
+                app:layout_constraintTop_toTopOf="@+id/editText_qita" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
