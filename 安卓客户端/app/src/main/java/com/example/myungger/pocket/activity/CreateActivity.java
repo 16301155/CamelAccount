@@ -10,14 +10,17 @@ import android.widget.TextView;
 
 import com.example.myungger.pocket.R;
 import com.example.myungger.pocket.entity.QQLogin;
+import com.example.myungger.pocket.entity.SynchronizeData;
 import com.example.myungger.pocket.manager.NetTask;
 import com.example.myungger.pocket.manager.RecordManager;
+import com.example.myungger.pocket.manager.SynManager;
 import com.example.myungger.pocket.util.ToastMessage;
 import com.example.myungger.pocket.util.ToastUtil;
 import com.tencent.tauth.UiError;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.litepal.LitePal;
 
 public class CreateActivity extends BaseActivity implements QQLogin.QQLoginListener ,NetTask.NetListener {
     QQLogin qqLogin;
@@ -96,8 +99,10 @@ public class CreateActivity extends BaseActivity implements QQLogin.QQLoginListe
     }
     @Override
     public void onNetSuccess(JSONArray jsonData, int code, String message){
-
         RecordManager.deleteAll();
+        //清空原有数据
+        LitePal.deleteAll(SynchronizeData.class);
+        ToastMessage.showToast(CreateActivity.this,message);
         ToastMessage.showToast(CreateActivity.this,"请放心，本账号数据已清除");
         CreateActivity.this.finish();
     }

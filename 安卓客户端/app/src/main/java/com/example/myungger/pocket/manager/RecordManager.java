@@ -17,7 +17,7 @@ public class RecordManager {
         Date date = new Date();
         return date;
     }
-    // 存入一系列记录
+    // 存入一系列记录！！！！！！这个方法有问题
     public static void saveRecords(List<Record> records){
         if (records.isEmpty())
         LitePal.saveAll(records);
@@ -31,12 +31,12 @@ public class RecordManager {
 
     //查询最新记录返回单条记录对象
     public static Record getFirstRecord(){
-        return LitePal.findFirst(Record.class);
+        return LitePal.findLast(Record.class);
     }
 
     //查询最早记录返回单条记录对象
     public static Record getLastRecord(){
-        return LitePal.findLast(Record.class);
+        return LitePal.findFirst(Record.class);
     }
 
     //查询某段时间的记录返回记录对象集合

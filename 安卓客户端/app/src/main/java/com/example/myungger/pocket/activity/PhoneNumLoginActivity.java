@@ -22,11 +22,16 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.example.myungger.pocket.R;
+import com.example.myungger.pocket.entity.DownLoad;
+import com.example.myungger.pocket.entity.SynchronizeData;
+import com.example.myungger.pocket.entity.Upload;
 import com.example.myungger.pocket.manager.NetTask;
+import com.example.myungger.pocket.manager.SynManager;
 import com.example.myungger.pocket.util.ToastMessage;
 import com.example.myungger.pocket.util.ToastUtil;
 
 import org.json.JSONArray;
+import org.litepal.LitePal;
 
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
@@ -235,10 +240,21 @@ public class PhoneNumLoginActivity extends BaseActivity implements TextWatcher,N
     }
 
     public void onNetSuccess(JSONArray jsonData, int code,String message){
+        //清空原有数据
+        LitePal.deleteAll(SynchronizeData.class);
+        SynManager.setUser(ActivityShare.phone_num);
+        //登陆成功提示消息
         ToastMessage.showToast(PhoneNumLoginActivity.this,message);
+        if(SynManager.isLogin() && SynManager.isNetConnect(PhoneNumLoginActivity.this)){
+            DownLoad downLoad = new DownLoad();
+            new Thread(downLoad).start();
+            ToastMessage.showToast(PhoneNumLoginActivity.this, "云端数据已存入本地");
+        }else
+            ToastMessage.showToast(PhoneNumLoginActivity.this, "WIFI未开启，暂停下载");
+
         Intent intent = new Intent(PhoneNumLoginActivity.this, MainActivity.class);
         startActivity(intent);
-        PhoneNumLoginActivity.this.finish();
+         PhoneNumLoginActivity.this.finish();
     }
     @Override
     public void onNetError(int errorCode, String errorMessage){

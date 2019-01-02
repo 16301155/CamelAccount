@@ -49,6 +49,7 @@ def login(request):
 def logout(request):
     temp = []
     if request.method == 'GET':
+        print(request.session.get('phone_number'))
         if request.session.get('phone_number', None) is not None:
             del request.session['phone_number']
             return get_json(temp, 200, 'Logout Successfully!')
@@ -63,27 +64,25 @@ def upload(request):
     temp = []
     if request.method == 'POST':
         data = request.POST
-        Record.objects.create(record_date=data['record_date'], record_type=data['flag'], money=data['money'], money_type=data['category'])
+        print(data['money'])
+        Record.objects.create(phone_number=data['phone_number'], record_date=data['record_date'], flag=data['flag'], money=data['money'], category=data['category'])
         return get_json(temp, 200, 'upload successfully!')
     else:
         return get_json(temp, 404, 'upload failed!')
 
 
 def download(request):
-    if request.method == 'POST':
-        data = request.POST
-        temp = Record.objects.all().order_by('-record_date')
+    if request.method == 'GET':
+        temp_records = Record.objects.filter(phone_number=request.GET.get('phone_number'))
+        print(request.GET.get('phone_number'))
         response = []
-        for x in temp:
+        for x in temp_records:
             temp = dict()
-            if (x.record_date - data['downTime']).seconds <= 0:
-                temp['record_date'] = x.record_date
-                temp['flag'] = x.record_type
-                temp['money'] = x.money
-                temp['category'] = x.money_type
-                response.append(temp)
-            else:
-                break
+            temp['record_date'] = x.record_date
+            temp['flag'] = x.flag
+            temp['money'] = x.money
+            temp['category'] = x.category
+            response.append(temp)
         return get_json(response, 200, 'DownLoad Successfully!')
     else:
         return get_json([], 404, 'DownLoad Failed!')

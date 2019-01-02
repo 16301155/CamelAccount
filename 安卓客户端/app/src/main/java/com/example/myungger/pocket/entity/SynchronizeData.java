@@ -6,17 +6,9 @@ import java.util.Date;
 
 public class SynchronizeData extends LitePalSupport {
     private int id;
-    private int phoneNumber;
+    private String phoneNumber;
     private Date synTime;
-    private Date downTime;
 
-    public Date getDownTime() {
-        return downTime;
-    }
-
-    public void setDownTime(Date downTime) {
-        this.downTime = downTime;
-    }
 
     public int getId() {
         return id;
@@ -28,11 +20,11 @@ public class SynchronizeData extends LitePalSupport {
 
 
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

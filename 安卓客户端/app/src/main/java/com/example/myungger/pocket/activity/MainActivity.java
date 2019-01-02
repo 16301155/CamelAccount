@@ -24,8 +24,11 @@ import com.example.myungger.pocket.R;
 import com.example.myungger.pocket.entity.FragmentAdapter;
 import com.example.myungger.pocket.entity.LineChartManager;
 import com.example.myungger.pocket.entity.Record;
+import com.example.myungger.pocket.entity.Upload;
 import com.example.myungger.pocket.fragment.OutcomeFragment;
 import com.example.myungger.pocket.manager.RecordManager;
+import com.example.myungger.pocket.manager.SynManager;
+import com.example.myungger.pocket.util.ToastMessage;
 import com.example.myungger.pocket.util.ToastUtil;
 import com.github.mikephil.charting.charts.LineChart;
 
@@ -61,9 +64,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initFragment();
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //初始化数据库
         LitePal.getDatabase();
         calendar = Calendar.getInstance();
+        if(SynManager.isNetConnect(MainActivity.this)){
+            if(SynManager.isLogin()){
+                Upload upload = new Upload();
+                new Thread(upload).start();
+                ToastMessage.showToast(MainActivity.this, "同步完成，已是最新数据");
+            }else
+                ToastMessage.showToast(MainActivity.this, "未登录无法同步");
 
+        }else
+            ToastMessage.showToast(MainActivity.this, "WIFI未开启，暂停同步");
         arrow_detail = findViewById(R.id.arrow_detail);
         outcome_detail = findViewById(R.id.income_detail);
         income_detail = findViewById(R.id.outcome_detail);

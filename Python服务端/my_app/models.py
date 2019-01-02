@@ -12,9 +12,9 @@ class User(models.Model):
 
 
 class Record(models.Model):
-    phone_number = models.CharField(max_length=30, unique=True)
-    record_type = models.IntegerField()
-    record_date = models.DateTimeField()
+    phone_number = models.CharField(max_length=30)
+    flag = models.IntegerField()
+    record_date = models.CharField(max_length=100)
     money = models.DecimalField(max_digits=10, decimal_places=2)
-    money_type = models.CharField(max_length=30)
+    category = models.CharField(max_length=30)
 
